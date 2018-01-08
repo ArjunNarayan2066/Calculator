@@ -1,0 +1,16 @@
+import func_op as f
+
+def test (start):
+	order = start
+	print("NOT PRINTING")
+	try:
+		while i < 10000:
+			function = [i for i in range (order) if not i%2]
+			root = f.factor(function, [])
+			print("# OF ROOTS = ", len(root))
+		print("Passed 10000")
+		return
+	except OverflowError:
+		print("Failed at ", order)
+		return
+		

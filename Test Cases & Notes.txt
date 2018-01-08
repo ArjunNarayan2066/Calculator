@@ -1,0 +1,28 @@
+x^2 + 1, but with many 0'd terms in front (0X^8 etc..)
+1x^4 + 0x^3 .... all zero's
+
+To avoid 1st case, maybe change terms for entering factorQuad & factorLinear
+	If the first non-zero entry is @ index order - cnt such that this == 2, then the first non-zero entry is @ 2 and it is quadratic
+
+To avoid 2nd case (where the calculations never reach 0 and are off), maybe increase precision, or always do a hard coded test on 0
+
+Test -> does compute function work w/ complex numbers?????
+
+All Arbitrary Values Used:
+	-10 & 10 as newtMethod real guesses
+	10-10i & 10+10i as newtMethod complex guesses
+	10**-12 as good enough precision
+
+
+Conditions for complex/real testing
+
+indexNonZero = function.
+
+if (len(function)%2 == 1) and (order > 3) #High Order even function
+	test complex
+
+else #Everything Else 
+	test real
+
+after each invidividual test come back here & re-evaluate with smaller function.
+Question: Will newtMethod work the same if I give it a complex or real????
