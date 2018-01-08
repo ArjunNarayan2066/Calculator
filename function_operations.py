@@ -5,6 +5,7 @@ def cmplxConj(num):
     return complex(num.real,-1*num.imag)
 
 def printRoot(root):
+    print("Roots are as follows")
     for i in range (len(root)):
         print("x - [" + str(root[i]) + "]")
     print("Done")
@@ -195,7 +196,10 @@ def synthDivide(function, root):
     for cnt in range (1, order):
         val = roundComplex((root * newFunction[cnt-1]) + function[cnt])
         newFunction.append(val)
-    return newFunction    
+    return newFunction
+
+def solveFunc (): #Function to quickly enter and test a function
+    printRoot (factor (makeFunc(), []))
 
 
 def factor (function, root):

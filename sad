@@ -1,0 +1,24 @@
+[1mdiff --git a/function_operations.py b/function_operations.py[m
+[1mindex bf94962..9540643 100644[m
+[1m--- a/function_operations.py[m
+[1m+++ b/function_operations.py[m
+[36m@@ -5,6 +5,7 @@[m [mdef cmplxConj(num):[m
+     return complex(num.real,-1*num.imag)[m
+ [m
+ def printRoot(root):[m
+[32m+[m[32m    print("Roots are as follows")[m
+     for i in range (len(root)):[m
+         print("x - [" + str(root[i]) + "]")[m
+     print("Done")[m
+[36m@@ -195,7 +196,10 @@[m [mdef synthDivide(function, root):[m
+     for cnt in range (1, order):[m
+         val = roundComplex((root * newFunction[cnt-1]) + function[cnt])[m
+         newFunction.append(val)[m
+[31m-    return newFunction    [m
+[32m+[m[32m    return newFunction[m
+[32m+[m
+[32m+[m[32mdef solveFunc (): #Function to quickly enter and test a function[m
+[32m+[m[32m    printRoot (factor (makeFunc(), []))[m
+ [m
+ [m
+ def factor (function, root):[m
